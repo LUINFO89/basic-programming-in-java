@@ -1,6 +1,6 @@
 package ComponentePractico;
 
-public class Calzado extends Producto { // No olvidar agregar los extends
+public class Calzado extends Producto implements Vista { // No olvidar agregar los extends
     //●	Calzado (como lo son tenis, calzado formal, sandalias, etc) el cual debe tener el siguiente parámetro adicional:
     //○	Talla: 35, 36, 37, etc
 
@@ -25,6 +25,20 @@ public class Calzado extends Producto { // No olvidar agregar los extends
     public String mostar() {
         // TODO Auto-generated method stub
         return String.format( "%d %s %s" , super.mostar(),this.tallaCalzado );
+    }
+
+
+    @Override
+    public String metodo1() {
+        // TODO Auto-generated method stub
+        return String.format("%s-%s", getCodigo(),getDescripción());
+    }
+
+
+    @Override
+    public String metodo2() {
+        // TODO Auto-generated method stub
+        return String.format("%s-%s-2f-2f", getCodigo(),getDescripción(),getPreciodecompra(),getPreciodeventa());
     }
 
 

@@ -5,7 +5,6 @@ import java.util.Scanner;
 import ComponentePractico.Calzado;
 import ComponentePractico.PrendasDeVestir;
 import ComponentePractico.Producto;
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
 public class App {
     public static void main(String[] args) throws Exception {

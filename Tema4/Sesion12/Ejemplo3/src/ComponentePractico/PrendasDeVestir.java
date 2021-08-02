@@ -1,6 +1,6 @@
 package ComponentePractico;
 
-public class PrendasDeVestir extends Producto { // como es una subclase de producto debe tener el extend
+public class PrendasDeVestir extends Producto implements Vista { // como es una subclase de producto debe tener el extend
     // Prendas de vestir (como lo son blusas, jeans, camisas, etc) el cual debe tener los siguientes parámetros adicionales:
     // Talla: S, M, L, etc
     // Permite planchado: verdadero o falso.
@@ -37,6 +37,16 @@ public class PrendasDeVestir extends Producto { // como es una subclase de produ
     public String mostar() {
         // TODO Auto-generated method stub
         return String.format("%s %s %c" ,super.mostar(),this.talla, this.PermitePlanchado);
+    }
+    @Override
+    public String metodo1() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public String metodo2() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
     
