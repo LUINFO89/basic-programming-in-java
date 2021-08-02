@@ -6,6 +6,7 @@ public class Calzado extends Producto { // No olvidar agregar los extends
 
     private int tallaCalzado;
 
+    
   
     // Generamos los constructores 
 
