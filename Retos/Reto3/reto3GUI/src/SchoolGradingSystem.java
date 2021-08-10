@@ -1,9 +1,9 @@
-import java.util.Scanner;
+
 public class SchoolGradingSystem extends GradingSystem{
  
 
     
-    public void loadData(){
+    public void loadData(){/*
         Scanner input = new Scanner(System.in);
         cantDatos = Integer.parseInt(input.nextLine());
         datos = new String[cantDatos][4];
@@ -12,6 +12,6 @@ public class SchoolGradingSystem extends GradingSystem{
             for (int j = 0; j < 4; j++) {
                 datos[i][j] =  vector[j];
             }           
-        }
+        }*/
     }
 }

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class GradingSystem {
     int ct1 = 0;
@@ -14,13 +14,14 @@ public class GradingSystem {
     double mayor = 0;
     double mayorest = 0;
     protected int cantDatos;
-    protected String[][] datos;
+   // protected String[][] datos;
+    protected float[][] datos = new float[cantDatos][4];
     
     
     public float  stat1(){
         float sum = 0;
         for (int k = 0; k < cantDatos; k++){
-            sum += Float.parseFloat(datos[k][3]);
+            sum += datos[k][3];
         }
         return sum /cantDatos;
     }
@@ -28,7 +29,7 @@ public class GradingSystem {
         int cont=0;
         
         for (int i = 0; i < cantDatos; i++) {
-        nt = Double.parseDouble(datos[i][3]);
+        nt =datos[i][3];
             if (nt > 2.5 && nt <= 3.5)
             cont ++;
         }
@@ -36,9 +37,9 @@ public class GradingSystem {
     }
     public String stat3(){
         for(int i =0; i < cantDatos; i++){
-            nt = Double.parseDouble(datos[i][3]);
-            mat = Double.parseDouble(datos[i][2]);
-            gen = Double.parseDouble(datos[i][1]);
+            nt = datos[i][3];
+            mat = datos[i][2];
+            gen = datos[i][1];
                
             if ((mat == 1)&&(gen == 0)){prom1 += nt;ct1 ++;}
             if ((mat == 2)&&(gen == 0)){prom2 += nt;ct2 ++;}
@@ -57,10 +58,10 @@ public class GradingSystem {
         
        
         for(int i =0; i < cantDatos; i++){
-            mat = Float.parseFloat(datos[i][2]);
-            gen = Float.parseFloat(datos[i][1]);
-            nt = Float.parseFloat(datos[i][3]);
-            es = Float.parseFloat(datos[i][0]);
+            mat = datos[i][2];
+            gen = datos[i][1];
+            nt = datos[i][3];
+            es = datos[i][0];
         
         if ((nt > mayor)&&(mat == 1)) {
                 mayor = nt;
