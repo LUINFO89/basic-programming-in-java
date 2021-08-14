@@ -26,22 +26,21 @@ public class SistemaController extends GradingSystem  {
     @FXML
     void calculate(ActionEvent event) {
       
-        int cantDatos = Integer.parseInt(IngresarDatos.getText()); 
+        this.cantDatos = Integer.parseInt(IngresarDatos.getText()); 
         
         //Vector para la matriz principal
-        
-                
-        for (int i=0;i<cantDatos;i++){
-            String prueba=TextDatos.getText();
-            String[] calificacion = prueba.split("\n");//Creando un vector apartir de un split en salto de linea
-            
+        String prueba=TextDatos.getText();
+        String[] calificacion = prueba.split("\n");//Creando un vector apartir de un spli  t en salto de linea
+        this.datos = new float[cantDatos][4];
+        for (int i=0;i<cantDatos;i++){  
             for (int x=0;x<calificacion.length;x++){
                 String[] calificaciones = calificacion[x].split(" "); //Creando la matriz  partir del vector de salto de linea con un split
-                for(int j=0;j<calificaciones.length;j++){
-                    
+                for(int j=0;j<4;j++){
                     datos[x][j] = Float.parseFloat(calificaciones[j]);//Asignando valores a la matriz
                 }
             }
+
+          
 
         System.out.println(stat1());
         System.out.println(stat2());
@@ -49,10 +48,8 @@ public class SistemaController extends GradingSystem  {
         System.out.println(stat4());
 
 
-        ResultData.setText(Float.toString(stat1()));
-        //ResultData.setText(Float.toString(stat2()));
-        //ResultData.setText(stat3());
-        //ResultData.setText(stat4());
+        ResultData.setText(Float.toString(stat1())  + '\n' + Float.toString(stat2())+ '\n' + stat3() + '\n' + stat4() );
+        
 
 
     }

@@ -15,7 +15,7 @@ public class GradingSystem {
     double mayorest = 0;
     protected int cantDatos;
    // protected String[][] datos;
-    protected float[][] datos = new float[cantDatos][4];
+    protected float[][] datos;
     
     
     public float  stat1(){
@@ -23,7 +23,7 @@ public class GradingSystem {
         for (int k = 0; k < cantDatos; k++){
             sum += datos[k][3];
         }
-        return sum /cantDatos;
+        return sum /cantDatos ;
     }
     public float stat2(){
         int cont=0;
