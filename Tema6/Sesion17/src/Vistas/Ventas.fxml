@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.VentasController">
+   <children>
+  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="170.0" layoutY="36.0" prefHeight="30.0" prefWidth="259.0" text="ALMACEN LA MARAVILLA">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane prefHeight="431.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Creacion de Clientes">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="98.0" layoutY="62.0" text="Identificacion (CC)" />
+                        <Label layoutX="98.0" layoutY="98.0" text="Nombre" />
+                        <Label layoutX="98.0" layoutY="135.0" text="Apellido" />
+                        <Label layoutX="98.0" layoutY="168.0" text="Genero (F/M)" />
+                        <TextField fx:id="identificacionTxt" layoutX="251.0" layoutY="58.0" />
+                        <TextField fx:id="NombreTxt" layoutX="251.0" layoutY="94.0" />
+                        <TextField fx:id="ApellidoTxt" layoutX="251.0" layoutY="131.0" />
+                        <TextField fx:id="GeneroTxt" layoutX="251.0" layoutY="164.0" />
+                        <Button fx:id="addClient" layoutX="226.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#addClient" text="Añadir Cliente" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Registro de Venta">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="43.0" layoutY="29.0" text="Nueva Venta">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="89.0" text="Producto" />
+                        <Label layoutX="59.0" layoutY="126.0" text="Cliente" />
+                        <Label layoutX="59.0" layoutY="168.0" text="Cantidad" />
+                        <ChoiceBox fx:id="productoCb" layoutX="225.0" layoutY="85.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="clienteCb" layoutX="225.0" layoutY="122.0" prefWidth="150.0" />
+                        <TextField fx:id="cantidadTxt" layoutX="302.0" layoutY="164.0" prefHeight="26.0" prefWidth="74.0" />
+                        <Button fx:id="registrar" layoutX="125.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="26.0" prefWidth="250.0" text="REGISTRAR" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

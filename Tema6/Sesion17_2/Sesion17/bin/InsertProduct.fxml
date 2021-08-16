@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProductoController">
+   <children>
+      <AnchorPane prefHeight="562.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="171.0" layoutY="53.0" text="Codigo" />
+            <Label layoutX="169.0" layoutY="88.0" text="Nombre" />
+            <Label layoutX="118.0" layoutY="122.0" text="Precio de Compra" />
+            <Label layoutX="129.0" layoutY="160.0" text="Precio de Venta" />
+            <Label layoutX="102.0" layoutY="200.0" text="Cantidad en Bodega" />
+            <Label layoutX="46.0" layoutY="239.0" text="Cant Min Requerida en Bodega" />
+            <TextField fx:id="codigotxt" layoutX="239.0" layoutY="49.0" />
+            <TextField fx:id="nombretxt" layoutX="239.0" layoutY="84.0" />
+            <TextField fx:id="preciocompratxt" layoutX="239.0" layoutY="118.0" />
+            <TextField fx:id="precioventatxt" layoutX="239.0" layoutY="156.0" />
+            <Label layoutX="103.0" layoutY="272.0" text="Cant Min Inventario" />
+            <TextField fx:id="cantbodegatxt" layoutX="239.0" layoutY="196.0" />
+            <TextField fx:id="CminRenBodtxt" layoutX="239.0" layoutY="235.0" />
+            <TextField fx:id="CmInventariotxt" layoutX="239.0" layoutY="268.0" />
+            <Button fx:id="productosbtn" layoutX="248.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#insertar" text="CREAR PRODUCTO" />
+            <TextArea fx:id="escrituraTxt" layoutX="200.0" layoutY="367.0" prefHeight="175.0" prefWidth="200.0" />
+            <Button fx:id="verproducto" layoutX="423.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#ver" text="VER PRODUCTO" />
+            <Button fx:id="registrarventaTxt" layoutX="423.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#irVentas" text="REGISTRAR VENTA" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

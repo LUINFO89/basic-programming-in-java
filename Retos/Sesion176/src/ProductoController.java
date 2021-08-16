@@ -50,7 +50,7 @@ public class ProductoController {
     void createSale(ActionEvent event) {
         //boton vista ventas 
         try {
-            FXMLLoader instancia = new FXMLLoader(getClass().getResource("Vistas/Ventas.fxml"));
+            FXMLLoader instancia = new FXMLLoader(getClass().getResource("Vistas/registroVenta.fxml"));
             Parent cargada = instancia.load();
             Scene loadForm = new Scene(cargada);
             Stage s1 = new Stage();

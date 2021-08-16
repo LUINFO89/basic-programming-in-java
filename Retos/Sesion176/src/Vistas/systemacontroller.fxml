@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="systemcontroller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="97.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema estadistico de calificaciones">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TabPane prefHeight="409.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ingresar Datos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="61.0" layoutY="57.0" text="Nombre:" />
+                        <TextField fx:id="Nametxt" layoutX="120.0" layoutY="53.0" promptText="Name" />
+                        <Label fx:id="Materia" layoutX="61.0" layoutY="95.0" prefHeight="17.0" prefWidth="51.0" text="Materia:" />
+                        <TextField fx:id="Subjecttxt" layoutX="121.0" layoutY="91.0" promptText="Subject" />
+                        <Label layoutX="300.0" layoutY="57.0" text="Nota:" />
+                        <TextField fx:id="Gradetxt" layoutX="359.0" layoutY="53.0" promptText="Grade" />
+                        <Label fx:id="Materia1" layoutX="300.0" layoutY="95.0" prefHeight="17.0" prefWidth="51.0" text="Genero:" />
+                        <TextField fx:id="Gendertxt" layoutX="360.0" layoutY="91.0" promptText="Gender" />
+                        <Button fx:id="saveBtn" layoutX="120.0" layoutY="148.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="25.0" prefWidth="391.0" text="Guardar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Procesar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="cargarbtn" layoutX="89.0" layoutY="14.0" mnemonicParsing="false" onAction="#cargarbtn" text="Cargar" />
+                        <TextArea fx:id="verdatos" layoutX="23.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" promptText="Ver datos" />
+                        <TextArea fx:id="calcular" layoutX="320.0" layoutY="38.0" prefHeight="209.0" prefWidth="244.0" promptText="Calcular datos" />
+                        <Button fx:id="procesarbtn" layoutX="237.0" layoutY="113.0" mnemonicParsing="false" onAction="#procesarbtn" text="Procesar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Consultar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="77.0" layoutY="23.0" text="Nombre:" />
+                        <Label layoutX="78.0" layoutY="53.0" prefHeight="17.0" prefWidth="51.0" text="Materia:" />
+                        <TextField fx:id="NombreConsultatxt" layoutX="128.0" layoutY="19.0" promptText="NombreConsultatxt" />
+                        <TextField fx:id="MateriaConsultatxt" layoutX="128.0" layoutY="49.0" promptText="MateriaConsultatxt" />
+                        <Separator layoutX="29.0" layoutY="86.0" prefHeight="5.0" prefWidth="541.0" />
+                        <Button fx:id="Consultbtn" layoutX="292.0" layoutY="49.0" mnemonicParsing="false" onAction="#procesarbtn" text="Consultar" />
+                        <Button fx:id="Eliminarbtn" layoutX="373.0" layoutY="49.0" mnemonicParsing="false" onAction="#Eliminarbtn" text="Eliminar" />
+                        <TextArea layoutX="42.0" layoutY="99.0" prefHeight="149.0" prefWidth="512.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
